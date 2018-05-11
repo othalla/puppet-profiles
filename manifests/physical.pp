@@ -1,4 +1,4 @@
-class profiles::server {
+class profiles::physical {
   class { '::chrony':
     servers            => [
       '0.fr.pool.ntp.org',
