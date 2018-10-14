@@ -1,6 +1,8 @@
 class profiles::reverse_proxy {
-  include ::cron
-
+  class { ::cron:
+    package_name => 'cron',
+    service_name => 'cron',
+  }
   class { ::nginx:
     confd_purge  => true,
     server_purge => true,
