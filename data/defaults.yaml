@@ -1,21 +1,4 @@
-prometheus::manage_prometheus_server: true
-prometheus::version: '2.0.0'
-prometheus::scrape_configs:
-    - job_name: 'nodexporter'
-      scrape_interval:  '10s'
-      scrape_timeout: '10s'
-      static_configs:
-      - targets:
-        - othanas.int.othalland.xyz:9100
-        - r001.int.othalland.xyz:9100
-        - r002.int.othalland.xyz:9100
-        labels:
-          alias: 'nodexporter'
-    - job_name: prometheus
-      scrape_interval: 10s
-      scrape_timeout: 10s
-      static_configs:
-      - targets:
-        - localhost:9090
-        labels:
-          alias: Prometheus
+profiles::prometheus_server::clients:
+  - othanas.int.othalland.xyz:9100
+  - r001.int.othalland.xyz:9100
+  - r002.int.othalland.xyz:9100
