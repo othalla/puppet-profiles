@@ -1,4 +1,7 @@
 class profiles::physical {
+
+  include prometheus::node_exporter
+
   class { '::chrony':
     servers            => [
       '0.fr.pool.ntp.org',
