@@ -21,7 +21,7 @@ class profiles::prometheus_server (
       'scrape_interval' => '5s',
       'scrape_timeout'  => '5s',
       'static_configs'  => [
-        { 'targets' => [ 'nodexporter.domain.com:9100' ],
+        { 'targets' => $clients,
         'labels'  => { 'alias'=> 'Node'}
         }
       ]
