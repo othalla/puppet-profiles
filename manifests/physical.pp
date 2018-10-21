@@ -1,6 +1,8 @@
 class profiles::physical {
 
-  include prometheus::node_exporter
+  class {'prometheus::node_exporter':
+    version => '0.16.0',
+  }
 
   class { '::chrony':
     servers            => [
