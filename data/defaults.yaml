@@ -1,3 +1,4 @@
+profiles::prometheus_server::version: 2.4.3
 profiles::prometheus_server::clients:
   - othanas.int.othalland.xyz:9100
   - r001.int.othalland.xyz:9100
