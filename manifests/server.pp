@@ -1,4 +1,5 @@
 class profiles::server {
+  include ::network
   include ::packages
   include ::sudo
   include ::henrylf
