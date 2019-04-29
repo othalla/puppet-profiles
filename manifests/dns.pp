@@ -11,7 +11,7 @@ class profiles::dns {
   listen_port                  => 53,
   prometheus                   => true,
   prometheus_listen_address    => $facts['ipaddress'],
-  prometheus_listen_port       => 1024,
+  prometheus_listen_port       => 9153,
   forward                      => true,
   forward_from                 => '.',
   forward_to                   => ['192.168.1.1'],
