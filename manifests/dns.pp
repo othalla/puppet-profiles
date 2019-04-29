@@ -17,7 +17,7 @@ class profiles::dns {
   forward_to                   => ['192.168.1.1'],
   auto                         => $zone_name,
   auto_config                  => {
-    'directoryx' => $zone_directory,
+    'directory' => $zone_directory,
   },
   log                          => true,
   errors                       => true,
