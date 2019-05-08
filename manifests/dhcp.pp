@@ -6,10 +6,11 @@ class profiles::dhcp {
     interfaces   => ['eth0'],
   }
   dhcp::pool{ 'ops.int.othalland.xyz':
-    network     => '192.168.1.0',
-    mask        => '255.255.255.0',
-    range       => '192.168.1.210 192.168.1.240',
-    gateway     => '192.168.1.1',
-    nameservers => ['192.168.1.131'],
+    network        => '192.168.1.0',
+    mask           => '255.255.255.0',
+    range          => '192.168.1.210 192.168.1.240',
+    gateway        => '192.168.1.1',
+    nameservers    => ['192.168.1.131'],
+    search_domains => ['int.othalland.xyz'],
   }
 }
