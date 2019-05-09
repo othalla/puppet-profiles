@@ -23,6 +23,7 @@ class profiles::server {
   }
   class { '::dnsclient':
     nameservers => ['192.168.1.131'],
-    options     => [],
+    domain      => 'int.othalland.xyz',
+    search      => ['int.othalland.xyz'],
   }
 }
