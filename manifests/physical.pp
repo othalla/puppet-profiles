@@ -1,7 +1,7 @@
 class profiles::physical {
 
   class {'prometheus::node_exporter':
-    version => '0.16.0',
+    version => '0.18.0',
   }
 
   class { '::chrony':
