@@ -1,7 +1,8 @@
 class profiles::physical {
 
   class {'prometheus::node_exporter':
-    version => '0.18.0',
+    version           => '0.18.0',
+    collectors_enable => ['ntp', 'mountstats', 'systemd', 'tcpstat'],
   }
 
   class { '::chrony':
