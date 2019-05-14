@@ -3,5 +3,6 @@ profiles::prometheus_server::clients:
   - othanas.int.othalland.xyz:9100
   - r001.int.othalland.xyz:9100
   - r002.int.othalland.xyz:9100
+  - n002.int.othalland.xyz:9100
 profiles::prometheus_server::dns_targets:
   - rctn011.int.othalland.xyz:9153
