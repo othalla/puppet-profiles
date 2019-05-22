@@ -18,6 +18,7 @@ class profiles::dns {
   auto                         => $zone_name,
   auto_config                  => {
     'directory' => $zone_directory,
+    'reload'    => '30s',
   },
   log                          => true,
   errors                       => true,
