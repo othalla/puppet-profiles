@@ -22,7 +22,7 @@ class profiles::server {
     },
   }
   class { '::dnsclient':
-    nameservers => ['192.168.1.131'],
+    nameservers => ['192.168.1.131', '192.168.1.120'],
     domain      => 'int.othalland.xyz',
     search      => ['int.othalland.xyz'],
   }
