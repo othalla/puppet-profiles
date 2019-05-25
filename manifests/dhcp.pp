@@ -2,7 +2,7 @@ class profiles::dhcp {
 
   class { 'dhcp':
     dnsdomain    => ['int.othalland.xyz'],
-    nameservers  => ['192.168.1.121'],
+    nameservers  => ['192.168.1.131', '192.168.1.120'],
     interfaces   => ['eth0'],
   }
   dhcp::pool{ 'ops.int.othalland.xyz':
@@ -10,7 +10,7 @@ class profiles::dhcp {
     mask           => '255.255.255.0',
     range          => '192.168.1.210 192.168.1.240',
     gateway        => '192.168.1.1',
-    nameservers    => ['192.168.1.131'],
+    nameservers    => ['192.168.1.131', '192.168.1.120'],
     search_domains => ['int.othalland.xyz'],
   }
 }
