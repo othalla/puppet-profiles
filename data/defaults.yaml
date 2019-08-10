@@ -9,3 +9,5 @@ profiles::prometheus_server::clients:
 profiles::prometheus_server::dns_targets:
   - rctn011.int.othalland.xyz:9153
   - rctn001.int.othalland.xyz:9153
+profiles::prometheus_server::plex_targets:
+  - plex.int.othalland.xyz:9090

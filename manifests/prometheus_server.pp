@@ -2,6 +2,7 @@ class profiles::prometheus_server (
   $dns_targets,
   $clients,
   $version,
+  $plex_targets,
 ) {
 
   class { 'prometheus::server':
@@ -43,6 +44,19 @@ class profiles::prometheus_server (
             'targets' => $dns_targets,
             'labels'  => {
               'alias'=> 'CoreDNS'
+            }
+          }
+        ]
+      },
+      {
+        'job_name' => 'plex',
+        'scrape_interval' => '15s',
+        'scrape_timeout'  => '10s',
+        'static_configs'  => [
+          {
+            'targets' => $plex_targets,
+            'labels'  => {
+              'alias'=> 'Plex'
             }
           }
         ]
